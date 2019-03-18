@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "4.3.1",
+    "cypress": "^3.2.0",
+    "enzyme": "^3.9.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
@@ -21,5 +24,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "## Challenge",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusGG/Junior-Dev-Challenge.git"
+  },
+  "author": "Marius Guei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusGG/Junior-Dev-Challenge/issues"
+  },
+  "homepage": "https://github.com/MariusGG/Junior-Dev-Challenge#readme"
 }
