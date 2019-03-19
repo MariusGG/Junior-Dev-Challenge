@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ListUsers from './listUsers'
+import DropDownMenu from './dropDownMenu'
 
 export default class PersonList extends React.Component {
   state = {
@@ -12,12 +13,6 @@ export default class PersonList extends React.Component {
 
   componentDidMount() {
     this.getUsers();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.userSelected !== this.state.userSelected) {
-      this.setState({ photos: null });
-    }
   }
 
   getUsers = () => {
@@ -65,9 +60,21 @@ export default class PersonList extends React.Component {
 
   render() {
       return (
-        <div>
-           <ListUsers setUser={this.setUser} usersInfo={this.state.users} />
-        </div>
+        <section>
+          <div>
+             <ListUsers setUser={this.setUser} usersInfo={this.state.users} />
+          </div>
+          <div>
+            {this.state.albums && (
+              <DropDownMenu
+                photos={this.state.photos}
+                getPhotos={this.getPhotos}
+                userName={this.state.userSelected}
+                albums={this.state.albums}
+              />
+            )}
+          </div>
+        </section>
 
       )
     }
