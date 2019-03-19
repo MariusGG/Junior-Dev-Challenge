@@ -1,6 +1,6 @@
 import React from 'react';
-
 import axios from 'axios';
+import ListUsers from './listUsers'
 
 export default class PersonList extends React.Component {
   state = {
@@ -24,6 +24,7 @@ export default class PersonList extends React.Component {
 
   setUser = () => {
     this.setState({ currentUser: user.name });
+    this.getAlbums(user.id);
   }
 
   getAlbums = () => {
@@ -44,7 +45,9 @@ export default class PersonList extends React.Component {
 
   render() {
       return (
-        <h1>hello</h1>
+        <div>
+          <ListUsers setUser={this.setUser} usersInfo={this.state.users} />
+        </div>
       )
     }
   }
