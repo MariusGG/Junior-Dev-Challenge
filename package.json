@@ -3,18 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "4.3.1",
     "cypress": "^3.2.0",
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "reactstrap": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,7 +31,10 @@
   ],
   "description": "## Challenge",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+
+
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MariusGG/Junior-Dev-Challenge.git"
