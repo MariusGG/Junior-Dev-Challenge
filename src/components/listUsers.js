@@ -1,14 +1,15 @@
 import React from "react";
 
-export default const Menu = props => {
+const ListUsers = props => {
   return (
     <ul>
       {props.usersInfo &&
-        props.usersInfo.map(user => (
-          <li onClick={() => props.setUser(user)} key={user.id}>
-            {user.name}
+        props.usersInfo.map(users => (
+          <li onClick={() => props.setUser(users)} key={users.id}>
+            {users.name}
           </li>
         ))}
     </ul>
   );
 };
+export default ListUsers;
